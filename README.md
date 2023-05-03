@@ -1,5 +1,5 @@
-# Symfony Docker
-This is based from [Symfony-docker](https://github.com/dunglas/symfony-docker) from [Symfony docs](https://symfony.com/doc/current/setup/docker.html).
+# Symfony 6.2 with Docker
+This is based from [Symfony docs](https://symfony.com/doc/current/setup/docker.html) and [Symfony-docker](https://github.com/dunglas/symfony-docker).
 
 ## Commands
 

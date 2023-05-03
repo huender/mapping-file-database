@@ -1,0 +1,19 @@
+api_upload_file:
+    path: /api/upload-file
+    controller: App\Controller\ApiController::uploadFile
+    methods: [POST]
+
+api_post_mapping:
+    path: /api/mapping
+    controller: App\Controller\ApiController::mapping
+    methods: [POST]
+
+api_post_import:
+    path: /api/import
+    controller: App\Controller\ApiController::import
+    methods: [POST]
+    
+api_get_objects:
+    path: /api/object/list
+    controller: App\Controller\ObjectsController::list
+    methods: [GET]

@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "322eae4b-2fbe-451c-b423-c4a8206fcf6d",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "186605"
+	},
+	"item": [
+		{
+			"name": "Upload file",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/huender/Desktop/InventSys/FileToImport.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/upload-file",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"upload-file"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mapping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"file_path\": \"/tmp/uploaded_fileMlGALP\",\n  \"object_type\": \"hydrant\",\n  \"mapping\": [\n    {\n      \"column_name\": \"user_identifier\",\n      \"property_name\": \"OID\"\n    },\n    {\n      \"column_name\": \"sector_name\",\n      \"property_name\": \"Sector Name\"\n    },\n    {\n      \"column_name\": \"latitude\",\n      \"property_name\": \"Latitude\"\n    },\n    {\n      \"column_name\": \"longitude\",\n      \"property_name\": \"Longitude\"\n    },\n    {\n      \"column_name\": \"manufaturer\",\n      \"property_name\": \"Manufaturer\"\n    },\n    {\n      \"column_name\": \"model\",\n      \"property_name\": \"Model\"\n    },\n    {\n      \"column_name\": \"voltage\",\n      \"property_name\": \"Voltage\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/mapping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"mapping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get objects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/object/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"object",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
