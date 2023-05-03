@@ -5,16 +5,17 @@ namespace App\Service;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class FileManager extends FileManagerInterface
 {
     /**
-     * Upload the file and return the temp file path
+     *  Upload the file and return the temp file path
      *
-     * @param $file
+     * @param UploadedFile $file
      * @return string
      */
-    public function uploadFile($file): string
+    public function uploadFile(UploadedFile $file): string
     {
         // Process the uploaded file and store it in a temporary location
         $tmpFilePath = tempnam(sys_get_temp_dir(), 'uploaded_file');

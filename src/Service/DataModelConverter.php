@@ -29,7 +29,7 @@ class DataModelConverter
         $total = [];
 
         foreach ($mappedData as $row) {
-            //@TODO find the correct object or create if doesnt exists
+            //@TODO find the correct object or create if doesnt exists, the user can change it in another interface
             $object = new Objects();
             $object->setType($mappingPostRequest->objectType);
 
@@ -37,6 +37,8 @@ class DataModelConverter
                 //@TODO find the correct field mapped to fill the props values or create if doesnt exists
                 $fields = new Fields();
                 $fields->setName($propName);
+
+                //@TODO Check the null values and return it for the user validation (maybe with the file line)
 
                 $objectProp = new ObjectProp();
                 $objectProp->setFields($fields);

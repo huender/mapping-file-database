@@ -6,9 +6,9 @@ This is based from [Symfony docs](https://symfony.com/doc/current/setup/docker.h
 1. If not already done, [install Docker Compose](https://docs.docker.com/compose/install/) (v2.10+)
 2. Run `docker compose build --pull --no-cache` to build fresh images
 3. Run `docker compose up` (the logs will be displayed in the current shell)
-4. Run `docker exec -it symfony-docker-php-1 sh` (to open the shell)
+4. Run `docker exec -it mapping-file-database-php-1 sh` (to open the shell)
 5. Run `docker compose down --remove-orphans` to stop the Docker containers.
-
+6. To run the tests ` docker exec -it mapping-file-database-php-1 php bin/phpunit tests/`
 ## Request explanation
 
 There is a [Sample Postman collection](Sample.postman_collection.json) with the requests.

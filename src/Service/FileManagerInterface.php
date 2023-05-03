@@ -4,16 +4,17 @@ namespace App\Service;
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 abstract class FileManagerInterface
 {
     /**
      * Upload the file and return the temp file path
      *
-     * @param $file
+     * @param UploadedFile $file
      * @return string
      */
-    public abstract function uploadFile($file): string;
+    public abstract function uploadFile(UploadedFile $file): string;
 
     /**
      * @param string $filePath
